@@ -1,0 +1,47 @@
+#topics .topics-image img {
+    width: 550px;
+    object-fit: cover;
+}
+
+#topics .topics-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 24px;
+}
+
+#topics .topics-list li {
+    font-family: "Alegreya", serif;
+    font-weight: 400;
+    font-size: 20px;
+    margin: 24px 0;
+    position: relative;
+}
+
+#topics .topics-list li::before {
+    content: "";
+    position: absolute;
+    background-color: var(--red-color);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    left: -24px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#topics .content-container {
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+}
+
+#topics .wrapper {
+    position: relative;
+}
+
+#topics .bg-element1 {
+    position: absolute;
+    right: -2px;
+    bottom: 0;
+}
