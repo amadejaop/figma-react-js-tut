@@ -56,6 +56,7 @@ a.logo .red {
 
     nav .menu-icon {
         display: block;
+        cursor: pointer;
     }
 
     .mobile-menu-container {
@@ -84,6 +85,7 @@ a.logo .red {
         position: fixed;
         top: 32px;
         right: 60px;
+        cursor: pointer;
     }
 
     .mobile-menu-container .menu-items li a {
