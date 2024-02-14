@@ -45,3 +45,20 @@
     right: -2px;
     bottom: 0;
 }
+
+@media (max-width: 1040px) {
+    #topics .topic-image img {
+        width: 385px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 720px) {
+    #topics .topic-image img {
+        display: none;
+    }
+
+    #topics .bg-element1 {
+        right: 32px;
+    }
+}

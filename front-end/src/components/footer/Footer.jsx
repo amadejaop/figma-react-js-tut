@@ -49,6 +49,9 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
+            <div className="copyright mobile">
+                This website was designed by GTCoding &copy; 2023
+              </div>
         </div>
       </div>
     </footer>
