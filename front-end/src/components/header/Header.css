@@ -57,3 +57,20 @@ header .cta .demo-btn {
     font-weight: 800;
     font-size: 16px;
 }
+@media (max-width: 1040px) {
+    header .cta {
+        width: 356px;
+    }
+}
+
+@media (max-width: 720px) {
+    header .cta {
+        width: unset;
+        right: 32px;
+        left: 32px;
+    }
+
+    header .cta h1 {
+        font-size: 32px;
+    }
+}

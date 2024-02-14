@@ -1,25 +1,52 @@
 import React from 'react';
 import "./Navbar.css";
+import { menuIcon, closeIcon } from "../../assets"
 
 const Navbar = () => {
   return (
+    <>
     <nav>
       <a href="#" className='logo'>Sound<span className='red'>DZign</span></a>
       <ul>
         <li>
-          <a href="#">Course Details</a>
+          <a href="#topics">Course Details</a>
         </li>
         <li>
-          <a href="#">About</a>
+          <a href="#info">About</a>
         </li>
         <li>
-          <a href="#">Blog</a>
+          <a href="#blog">Blog</a>
         </li>
         <li>
-          <a href="#">Testimonials</a>
+          <a href="#testimonials">Testimonials</a>
         </li>
       </ul>
+
+      <div className="menu-icon">
+        <img src={menuIcon} alt="" />
+      </div>
     </nav>
+
+    <div className="mobile-menu-container">
+      <div className="close-icon">
+        <img src={closeIcon} alt="" />
+      </div>
+      <ul className='menu-items'>
+        <li>
+          <a href="#topics">Course Details</a>
+        </li>
+        <li>
+          <a href="#info">About</a>
+        </li>
+        <li>
+          <a href="#blog">Blog</a>
+        </li>
+        <li>
+          <a href="#testimonials">Testimonials</a>
+        </li>
+      </ul>
+    </div>
+    </>
   )
 }
 
