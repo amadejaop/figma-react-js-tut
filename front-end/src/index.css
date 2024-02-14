@@ -16,6 +16,10 @@ body {
     font-family: "Inter", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .wrapper {
     max-width: 1024px;
     margin: 0 auto;
