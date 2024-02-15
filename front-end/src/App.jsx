@@ -1,7 +1,8 @@
 import React from 'react';
-import { Header, Info, Topics, Blog, Testimonials, Footer } from "./components"
+import { Header, Info, Topics, Blog, Testimonials, Footer } from "./components";
 
 const App = () => {
+
   return (
     <>
     <Header />

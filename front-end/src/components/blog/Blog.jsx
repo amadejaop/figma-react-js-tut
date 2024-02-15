@@ -1,42 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./Blog.css";
-import { blog1, blog2, blog3 } from "../../assets"
+import { urlFor, client } from "../../client";
 
 const Blog = () => {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    const query = '*[_type == "posts"][0..2] ';
+
+    client.fetch(query).then((data) => {
+      setPosts(data);
+    });
+  }, []);
+
   return (
     <section id='blog' className='pink'>
       <div className="wrapper">
         <h2 className="light">Latest Posts</h2>
         <div className="content-container">
+          {posts.map((post) => (
           <div className="post">
-            <div className="tag">DAW</div>
+            <div className="tag">{post.label}</div>
             <a href="#">
-              <img src={blog1} alt="" />
+              <img src={urlFor(post.thumbnail)} alt="" />
             </a>
             <a href="#">
-              <h3 className="post-title">How to use drum machine in logic pro X</h3>
+              <h3 className="post-title">{post.title}</h3>
             </a>
           </div>
-
-          <div className="post">
-            <div className="tag">Mixing</div>
-            <a href="#">
-              <img src={blog2} alt="" />
-            </a>
-            <a href="#">
-              <h3 className="post-title">How to mix guitars effectively</h3>
-            </a>
-          </div>
-
-          <div className="post">
-            <div className="tag">VOX</div>
-            <a href="#">
-              <img src={blog3} alt="" />
-            </a>
-            <a href="#">
-              <h3 className="post-title">The real power of harmonies in music production</h3>
-            </a>
-          </div>
+          ))}
         </div>
 
         <div className="btn-container">
